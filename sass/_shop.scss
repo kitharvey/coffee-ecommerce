@@ -1,0 +1,71 @@
+    //// SHOP
+    .shop-main{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 5% 0;
+        .product{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width:  40%;
+            img{
+                height: auto;
+                width:  300px;
+            }
+        }
+        
+        .product-details{
+            width:  40%;
+            .product-description, .price{
+                margin: 5% 0;
+            }
+
+            .add-to-cart{
+                margin: 10% 0;
+
+                input{
+                    font-family: inherit;
+                    outline: 0;
+                    border: 0;
+                    color: $color;
+                    font-weight: 700;
+                    width: 50px;
+                    height: 30px;
+                    text-align: center;
+                    background-color: #eeeeee;
+                }
+
+                .button{
+                    color: $color2;
+                    text-transform: uppercase;
+                    padding: 20px;
+                    border: 2px solid $color2;
+                    font-weight: 700;
+                    transition: .5s ease;
+                    text-decoration: none;
+                    cursor: pointer;
+                    &:hover{
+                        background: $color2;
+                        color: $color3;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (orientation: portrait){
+            .shop-main{
+                flex-direction: column;
+                .product, .product-details{
+                    width: 90%;
+                    margin: 5% 0;
+                }
+            }
+    }
+        

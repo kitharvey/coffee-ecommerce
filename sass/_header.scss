@@ -1,0 +1,167 @@
+header{
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color3;
+    .navbar{
+        width: 100%;
+        margin: 0 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        .logo{
+            margin-right: auto;
+            a {
+                img {
+                    height: 40px;
+                    &:hover{
+                        opacity: .5;
+                    }
+                }
+            }
+           
+        }
+
+        .menu-button{
+            position: absolute;
+            top: 2.5%;
+            right: 2.5%;
+            margin-left: auto;
+            height: 32px;
+            width: 32px;
+            cursor: pointer;
+            visibility: hidden;
+            z-index: -1;
+            .burger{
+                position: absolute;
+                top: 16px;
+                height: 3px;
+                width: 32px;
+                background: $color;
+                transition: all .5s ease;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: -8px;
+                    height: 3px;
+                    width: 32px;
+                    background: $color;
+                    transition: all .5s ease;
+                }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    height: 3px;
+                    width: 32px;
+                    background: $color;
+                    transition: all .5s ease;
+                }
+
+                &.open{
+                    transform: rotate(360deg);
+                    background: transparent;
+                    
+                    &::before{
+                        transform: rotate(45deg) translate(3.5px, 8px);
+                    }
+                    &::after{
+                        transform: rotate(-45deg) translate(3.5px, -8px);
+                    }
+                }
+            
+            }
+
+
+        }
+
+        .menu{
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            width: 30%;
+            .menu-items{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: .8rem;
+                color: $color;
+                transition: ease;
+                &:hover{
+                    color: $color2;
+                    font-weight: 700;
+                }
+            }
+
+            .active-nav{
+                color: $color2;
+                font-weight: 700;
+            }
+
+            .cart-btn{
+                .cart-button{
+                    color: $color;
+                    font-size: 1.5rem;
+                    position: relative;
+                    transition: ease;
+                    cursor: pointer;
+                    &:hover{
+                        color: $color2;
+                    }
+
+                    &:after {
+                        content: attr(data-count);
+                        position: absolute;
+                        height: 1rem;
+                        min-width: 1rem;
+                        width: max-content;
+                        top: -.5rem;
+                        right: -1rem;
+                        text-align: center;
+                        text-justify: center;
+                        font-size: .7rem;
+                        color: $color3;
+                        background: $color;
+                        border-radius: 2rem;
+                        padding: 2px;
+                      }
+                }
+            }
+        }
+    }
+}
+
+
+@media (orientation: portrait){
+    header{
+        .navbar{
+            margin: 0 1%;
+            .menu-button{
+                visibility: visible;
+                z-index: 2;
+            }
+            .menu{
+                position: absolute;
+                justify-content: space-evenly;
+                top: 0;
+                flex-direction: column;
+                z-index: 1;
+                transform: translateY(-100%);
+                width: 100%;
+                height: 100vh;
+                background: $color3;
+                transition: all .5s ease;
+                &.open{
+                    transform: translateY(0%);
+                }
+            }
+        }
+    }
+}

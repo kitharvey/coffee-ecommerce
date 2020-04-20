@@ -1,0 +1,32 @@
+footer{
+    bottom: 0;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    a{
+        text-decoration: none;
+        color: $color; 
+        transition: ease;
+        &:hover{
+            color: $color2;
+        }
+    }
+    small, p{
+        margin-top: 10px;
+    }
+}
+
+
+@media (orientation: portrait){
+    footer{
+        p{
+            margin: 5% 5% 0% 5% ;
+            text-align: center;
+        }
+    }
+}
+    

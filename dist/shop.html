@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24144cbc12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./img/cockcrow.svg" type = "image/x-icon" sizes="any">
+    <title>Cockcrow | Shop</title>
+</head>
+<body>
+    <header class="Header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="./img/LOGO.svg" alt="logo" > </a>
+            </div>
+
+            <div class="menu-button">
+                <span class="burger"></span>
+            </div>
+
+            <div class="menu">
+                <a class="menu-items" href="index.html">home</a>
+                <a class="menu-items" href="about.html">about</a>
+                <a class="menu-items active-nav" href="shop.html">shop</a>
+                <div class="cart-btn">
+                    <a class="cart-button" data-count=""> <i class="fas fa-shopping-cart"></i> </a>
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </header>
+
+    <div class="cart">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h3 class="your-cart">Your Cart</h3>
+                <a class="close">&times;</a>
+            </div>
+
+            <div class="cart-items"> <p>No items found.</p> </div>
+
+            <div class="cart-footer">
+                <h3>Subtotal</h3>
+                <p>$ <span class="subtotal">0</span>.00</p>
+            </div>
+
+            <a id="checkout" class="checkout"> CHECKOUT </a>
+        </div>
+    </div>
+
+    <div class="main">
+       <div class="shop-main">
+            <div class="product">
+                <img class="front" src="./img/front.jpg" alt="front">
+                <img class="inside" src="./img/inside.jpg" alt="inside">
+            </div>
+
+            <div class="product-details">
+                <h3 class="product-name">THE GOOD MORNING</h3>
+                <p class="price">$15.00 USD</p>
+                <p class="product-description">A richly balanced medium roast with the smooth taste of red fruits, baker's chocolate, and cola. It's roasted from a certified organic blend of seasonal 50% Guatemalan & 50% Peruvian coffee beans.</p>
+                <p class="product-description">Roasted in Virginia Beach, VA every Tuesday and shipped out within 24 hours.</p>
+                <p class="product-description">12 ounces of organic whole beans.</p>
+
+                <div class="add-to-cart">
+                    <input class="qnty" type="number"  min="1" placeholder="0">
+                    <a id="add-to-cart" class="button" >ADD TO CART</a>
+                </div>
+            </div>
+       </div>
+    </div>
+
+    <footer class="Footer">
+        <p> Contact Us: <span> <a href="mailto:support@cockcrowcoffeecompany.com"> support@cockcrowcoffeecompany.com</a> </span> </p>
+        <small>All rights reserved Cockcrow Coffee Co.</small>
+    </footer>
+
+
+    <script src="./script/shop.js"></script>
+</body>
+</html>

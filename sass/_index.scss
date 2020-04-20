@@ -1,0 +1,119 @@
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hero-a, .hero-b, .hero-c {
+        height: 90vh;
+        width: 98%;
+        filter: grayscale(1);
+    }
+    .hero-a{
+        background: url(../img/sunrise.jpg) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .buy{
+            margin-top: auto;
+            color: $color3;
+            text-transform: uppercase;
+            padding: 20px;
+            border: 2px solid $color3;
+            font-weight: 700;
+            transition: .5s ease;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+                color: $color2;
+                background: $color3;
+                
+            }
+        }
+
+        .scroll{
+            margin-top: auto;
+            color: $color3;
+        }
+    }
+    .hero-b{
+        background: url(../img/beans.jpg) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .hero-c{
+        background: url(../img/coffeecup.jpg) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .hero-text{
+        height: max-content;
+        margin: 0 20%;
+        padding: 100px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .text{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .text-small{
+            text-align: center;
+        }
+        
+    }
+
+    .hero-text-bottom{
+        height: 40vh;
+        margin: 0 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        .text{
+            margin-top: auto;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .text-small{
+            text-align: center;
+        }
+
+        .buy{
+            margin-top: auto;
+            color: $color2;
+            text-transform: uppercase;
+            padding: 20px;
+            border: 2px solid $color2;
+            font-weight: 700;
+            transition: .5s ease;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+                background: $color2;
+                color: $color3;
+            }
+        }
+        
+    }
+}
+
+@media (orientation: portrait){
+    .main{
+        .hero-text{
+            margin: 5%;
+            padding: 100px 10px;
+        }
+        .hero-text-bottom{
+            margin: 0 5%;
+        }
+    }
+}
+    

@@ -1,0 +1,54 @@
+ //// ABOUT
+ .about-main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .a-hero-about{
+        background: url("../img/farmer.jpg") no-repeat center ;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 80vh;
+        width: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: grayscale(1);
+
+        .text-about{
+            width: 50%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: $color3;
+            padding: 10px;
+            background: rgba($color2, $alpha: .5);
+            p, h3{
+                text-align: center;
+                margin: 1% 0;
+                line-height: 1.6;
+            }
+        }
+
+    }
+
+    
+    
+    
+}
+
+
+
+@media (orientation: portrait){
+    .about-main{
+        .a-hero-about{
+            .text-about{
+                width: 95%;
+            }
+        }     
+    }    
+}
+    
