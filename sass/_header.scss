@@ -14,11 +14,12 @@ header{
         align-items: center;
         flex-direction: row;
 
-        .logo{
+        .logo{     
             margin-right: auto;
             a {
                 img {
-                    height: 40px;
+                    margin-top: auto;
+                    height: 35px;
                     &:hover{
                         opacity: .5;
                     }
@@ -28,15 +29,12 @@ header{
         }
 
         .menu-button{
-            position: absolute;
-            top: 2.5%;
-            right: 2.5%;
-            margin-left: auto;
             height: 32px;
             width: 32px;
             cursor: pointer;
             visibility: hidden;
             z-index: -1;
+            position: relative;
             .burger{
                 position: absolute;
                 top: 16px;
@@ -103,36 +101,37 @@ header{
             .active-nav{
                 color: $color2;
                 font-weight: 700;
-            }
+            }     
+        }
 
-            .cart-btn{
-                .cart-button{
-                    color: $color;
-                    font-size: 1.5rem;
-                    position: relative;
-                    transition: ease;
-                    cursor: pointer;
-                    &:hover{
-                        color: $color2;
-                    }
-
-                    &:after {
-                        content: attr(data-count);
-                        position: absolute;
-                        height: 1rem;
-                        min-width: 1rem;
-                        width: max-content;
-                        top: -.5rem;
-                        right: -1rem;
-                        text-align: center;
-                        text-justify: center;
-                        font-size: .7rem;
-                        color: $color3;
-                        background: $color;
-                        border-radius: 2rem;
-                        padding: 2px;
-                      }
+        .cart-btn{
+            margin-left: 10%;
+            .cart-button{
+                color: $color;
+                font-size: 1.5rem;
+                position: relative;
+                transition: ease;
+                cursor: pointer;
+                &:hover{
+                    color: $color2;
                 }
+
+                &:after {
+                    content: attr(data-count);
+                    position: absolute;
+                    height: .8rem;
+                    min-width: .8rem;
+                    width: max-content;
+                    top: -.5rem;
+                    right: -.5rem;
+                    text-align: center;
+                    text-justify: center;
+                    font-size: .5rem;
+                    color: $color3;
+                    background: $color;
+                    border-radius: 2rem;
+                    padding: 1px;
+                  }
             }
         }
     }
@@ -142,7 +141,8 @@ header{
 @media (orientation: portrait){
     header{
         .navbar{
-            margin: 0 1%;
+            width: 95%;
+            margin: 0 auto;
             .menu-button{
                 visibility: visible;
                 z-index: 2;
@@ -161,6 +161,12 @@ header{
                 &.open{
                     transform: translateY(0%);
                 }
+            }
+
+            .cart-btn{
+                margin-left: 5%;
+                height: 32px;
+                width: 32px;
             }
         }
     }

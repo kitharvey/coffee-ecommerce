@@ -50,7 +50,8 @@ header .navbar .logo {
 }
 
 header .navbar .logo a img {
-  height: 40px;
+  margin-top: auto;
+  height: 35px;
 }
 
 header .navbar .logo a img:hover {
@@ -58,15 +59,12 @@ header .navbar .logo a img:hover {
 }
 
 header .navbar .menu-button {
-  position: absolute;
-  top: 2.5%;
-  right: 2.5%;
-  margin-left: auto;
   height: 32px;
   width: 32px;
   cursor: pointer;
   visibility: hidden;
   z-index: -1;
+  position: relative;
 }
 
 header .navbar .menu-button .burger {
@@ -156,7 +154,11 @@ header .navbar .menu .active-nav {
   font-weight: 700;
 }
 
-header .navbar .menu .cart-btn .cart-button {
+header .navbar .cart-btn {
+  margin-left: 10%;
+}
+
+header .navbar .cart-btn .cart-button {
   color: #777;
   font-size: 1.5rem;
   position: relative;
@@ -165,32 +167,33 @@ header .navbar .menu .cart-btn .cart-button {
   cursor: pointer;
 }
 
-header .navbar .menu .cart-btn .cart-button:hover {
+header .navbar .cart-btn .cart-button:hover {
   color: #000;
 }
 
-header .navbar .menu .cart-btn .cart-button:after {
+header .navbar .cart-btn .cart-button:after {
   content: attr(data-count);
   position: absolute;
-  height: 1rem;
-  min-width: 1rem;
+  height: .8rem;
+  min-width: .8rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   top: -.5rem;
-  right: -1rem;
+  right: -.5rem;
   text-align: center;
   text-justify: center;
-  font-size: .7rem;
+  font-size: .5rem;
   color: #fff;
   background: #777;
   border-radius: 2rem;
-  padding: 2px;
+  padding: 1px;
 }
 
 @media (orientation: portrait) {
   header .navbar {
-    margin: 0 1%;
+    width: 95%;
+    margin: 0 auto;
   }
   header .navbar .menu-button {
     visibility: visible;
@@ -219,6 +222,11 @@ header .navbar .menu .cart-btn .cart-button:after {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
+  header .navbar .cart-btn {
+    margin-left: 5%;
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .main {
@@ -236,7 +244,7 @@ header .navbar .menu .cart-btn .cart-button:after {
 }
 
 .main .hero-a, .main .hero-b, .main .hero-c {
-  height: 90vh;
+  height: 80vh;
   width: 98%;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
@@ -281,6 +289,7 @@ header .navbar .menu .cart-btn .cart-button:after {
 
 .main .hero-a .scroll {
   margin-top: auto;
+  margin-bottom: 2%;
   color: #fff;
 }
 
@@ -636,7 +645,7 @@ footer small, footer p {
   background: url("../img/farmer.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  height: 80vh;
+  height: 78vh;
   width: 98%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -688,6 +697,7 @@ footer small, footer p {
 
 .shop-main {
   width: 100%;
+  min-height: 78vh;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -704,7 +714,6 @@ footer small, footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 5% 0;
 }
 
 .shop-main .product {

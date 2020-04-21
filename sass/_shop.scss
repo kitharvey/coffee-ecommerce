@@ -1,12 +1,12 @@
     //// SHOP
     .shop-main{
         width: 100%;
+        min-height: 78vh;
         height: max-content;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin: 5% 0;
         .product{
             display: flex;
             flex-direction: column;
