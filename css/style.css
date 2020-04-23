@@ -198,6 +198,7 @@ header .navbar .cart-btn .cart-button:after {
   header .navbar .menu-button {
     visibility: visible;
     z-index: 2;
+    margin-left: 5%;
   }
   header .navbar .menu {
     position: absolute;
@@ -223,7 +224,6 @@ header .navbar .cart-btn .cart-button:after {
             transform: translateY(0%);
   }
   header .navbar .cart-btn {
-    margin-left: 5%;
     height: 32px;
     width: 32px;
   }
