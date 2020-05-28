@@ -5,11 +5,7 @@ Single product Coffee Company E-Commerce Website
 #### Simple Design/UI
 #### Mobile Responsive
 
-created using
 
-HTML
 
-CSS/SASS
-
-JavaScript
+created using     HTML  CSS/SASS  JavaScript
 
